@@ -1,7 +1,5 @@
 import 'package:cstechintern/model/home_model.dart';
 import 'package:cstechintern/services/storage_service.dart';
-import 'package:cstechintern/view/login_screen.dart';
-import 'package:cstechintern/view/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cstechintern/controller/home_controller.dart';
