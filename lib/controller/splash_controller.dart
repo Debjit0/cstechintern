@@ -1,5 +1,5 @@
 import 'package:cstechintern/model/device_model.dart';
-import 'package:cstechintern/services/api-service.dart';
+import 'package:cstechintern/services/api_service.dart';
 import 'package:cstechintern/services/appinfo_service.dart';
 import 'package:cstechintern/services/device_service.dart';
 import 'package:cstechintern/services/location_service.dart';

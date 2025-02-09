@@ -1,5 +1,5 @@
 import 'package:cstechintern/model/user_model.dart';
-import 'package:cstechintern/services/api-service.dart';
+import 'package:cstechintern/services/api_service.dart';
 import 'package:get/get.dart';
 import '../view/otp_screen.dart';
 

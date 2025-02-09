@@ -1,16 +1,16 @@
+import 'package:cstechintern/constants/url.dart';
 import 'package:cstechintern/model/user_model.dart';
 import 'package:cstechintern/services/storage_service.dart';
 import 'package:dio/dio.dart';
 
 class ApiService {
   final Dio _dio = Dio();
-  String _otpVerifyUrl =
-      "http://devapiv4.dealsdray.com/api/v2/user/otp/verification";
-  String _otpUrl = "http://devapiv4.dealsdray.com/api/v2/user/otp";
-  String _registerUrl = "http://devapiv4.dealsdray.com/api/v2/user/email/referral";
+  String _otpVerifyUrl = "${base}/user/otp/verification";
+  String _otpUrl = "${base}/user/otp";
+  String _registerUrl = "${base}/user/email/referral";
 
   Future<void> splashApi(Map<String, dynamic> deviceData) async {
-    const String url = "http://devapiv4.dealsdray.com/api/v2/user/device/add";
+    String url = "${base}/v2/user/device/add";
 
     try {
       Response response = await _dio.post(
@@ -31,6 +31,7 @@ class ApiService {
       print("API Error: $e");
     }
   }
+
   Future<UserModel?> sendOtp(String mobileNumber) async {
     String? savedDeviceId = await StorageService.getDeviceId();
     if (savedDeviceId == null) {
@@ -101,7 +102,8 @@ class ApiService {
     }
   }
 
-  Future<bool> registerUser(String email, String password, String? referralCode) async {
+  Future<bool> registerUser(
+      String email, String password, String? referralCode) async {
     String? userId = await StorageService.getUserId();
     if (userId == null) {
       print("User ID is missing");

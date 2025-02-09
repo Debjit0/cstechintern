@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:cstechintern/services/api-service.dart';
+import 'package:cstechintern/services/api_service.dart';
 import 'package:cstechintern/view/home_screen.dart';
 import 'package:cstechintern/view/registration_screen.dart';
 import 'package:get/get.dart';

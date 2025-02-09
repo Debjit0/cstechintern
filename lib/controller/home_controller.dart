@@ -1,3 +1,4 @@
+import 'package:cstechintern/constants/url.dart';
 import 'package:cstechintern/model/home_model.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
@@ -20,7 +21,7 @@ class HomeController extends GetxController {
 
   Future<void> fetchHomeData() async {
     try {
-      final response = await http.get(Uri.parse("http://devapiv4.dealsdray.com/api/v2/user/home/withoutPrice"));
+      final response = await http.get(Uri.parse("${base}/user/home/withoutPrice"));
 
       if (response.statusCode == 200) {
         final jsonData = json.decode(response.body)['data'];
